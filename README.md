@@ -1,5 +1,8 @@
 # dryao
 # -*- coding: utf-8 -*-
+
+
+
 import scrapy
 from Toutiao_spider.items import ToutiaoSpiderItem
 from scrapy.http.response.html import HtmlResponse
@@ -13,7 +16,6 @@ class ToutiaoSpider(scrapy.Spider):
     start_urls = ['https://www.toutiao.com/']
     base_domain = "https://www.toutiao.com"
 
-#好用么？我觉得pycharm错。。据说现在微软对PYTHON支持不错啊~~~都可以吧，这个跟IDE没啥关系吧？
 
     def parse(self, response):
         a_list = response.xpath("//div//a[@class='link title']")
